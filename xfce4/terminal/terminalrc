@@ -1,0 +1,26 @@
+[Configuration]
+FontName=Source Code Pro 11
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=100x30
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=FALSE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+MiscScrollAlternateScreen=TRUE
+BackgroundDarkness=0,660000
+ColorPalette=#002b36;#dc322f;#859900;#b58900;#268bd2;#6c71c4;#2aa198;#93a1a1;#657b83;#dc322f;#859900;#b58900;#268bd2;#6c71c4;#2aa198;#fdf6e3
+ColorForeground=#93a1a1
+ColorCursor=x
+ColorBackground=#002b36
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+
