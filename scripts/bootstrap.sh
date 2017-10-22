@@ -41,4 +41,8 @@ ln -fs "$ROOT_DOTFILES_DIR/emacs/init.el" "$HOME/.emacs.d/init.el"
 
 ln -fs "$ROOT_DOTFILES_DIR/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/terminal/terminalrc"
 
+# Xresources
+ln -fs "$ROOT_DOTFILES_DIR/env/.Xresources" "$HOME/.Xresources"
+xrdb ~/.Xresources
+
 echo "Bootstrapping completed"
