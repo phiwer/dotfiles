@@ -45,4 +45,10 @@ ln -fs "$ROOT_DOTFILES_DIR/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/termi
 ln -fs "$ROOT_DOTFILES_DIR/env/.Xresources" "$HOME/.Xresources"
 xrdb ~/.Xresources
 
+# Screen
+ln -fs "$ROOT_DOTFILES_DIR/screen/.screenrc" "$HOME/.screenrc"
+
+# Midnight Commander
+ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
+
 echo "Bootstrapping completed"

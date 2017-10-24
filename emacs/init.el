@@ -1,7 +1,7 @@
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/") t)
 
 ;; Themes
@@ -19,7 +19,8 @@
   '(elpy
     material-theme
     zenburn-theme
-    color-theme-sanityinc-tomorrow))
+    color-theme-sanityinc-tomorrow
+    function-args))
 
 ;; Install packages
 (mapc #'(lambda (package)

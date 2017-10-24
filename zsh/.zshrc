@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/phiwer/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -83,3 +83,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias VIP='sudo minicom -D /dev/ttyVIP'
+alias MP='sudo minicom -D /dev/ttyMP'
+
+function setup_droid_env() {
+    cd ~/source/android_icup
+    . build/envsetup.sh
+    lunch 31
+}
+
+alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch 31'

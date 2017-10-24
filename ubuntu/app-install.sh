@@ -44,8 +44,15 @@ sudo apt install rofi
 # Thunderbird
 sudo apt install thunderbird
 
+# Arandr GUI for xrandr
+sudo apt install arandr
+
 # Dev
 sudo apt install dh-autoreconf
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf libxcb-xrm-dev
+
+# Java
+sudo apt install openjdk-8-jdk
+
 # Npm
 # Nodejs
