@@ -12,7 +12,35 @@ APP_INSTALL_SCRIPT="$ROOT_DOTFILES_DIR/ubuntu/app-install.sh"
 bash "$APP_INSTALL_SCRIPT"
 
 # I3
-I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config"
+I3_SOURCE_CONFIG_FILE=""
+PS3='Please enter your i3 config choice: '
+options=("Desktop Home" "Thinkpad" "Desktop Work" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Desktop Home")
+            echo "You selected home configuration"
+	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-home"
+	    break
+            ;;
+        "Thinkpad")
+            echo "You selected thinkpad configuration"
+	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-thinkpad"
+	    break
+            ;;
+        "Desktop Work")
+            echo "You selected work configuration"
+	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-work"
+	    break
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+done
+
+
 I3_SYMLINK_CONFIG_FILE="$HOME/.config/i3/config"
 ln -fs $I3_SOURCE_CONFIG_FILE $I3_SYMLINK_CONFIG_FILE
 echo "i3 config file symlinked: $I3_SYMLINK_CONFIG_FILE -> $I3_SOURCE_CONFIG_FILE"
