@@ -11,6 +11,10 @@ echo "Installing applications"
 APP_INSTALL_SCRIPT="$ROOT_DOTFILES_DIR/ubuntu/app-install.sh"
 bash "$APP_INSTALL_SCRIPT"
 
+# Fonts
+echo "Symlinking fonts"
+ln -fs "$ROOT_DOTFILES_DIR/fonts" "$HOME/.fonts"
+
 # I3
 I3_SOURCE_CONFIG_FILE=""
 PS3='Please enter your i3 config choice: '
@@ -67,6 +71,8 @@ fi
 
 ln -fs "$ROOT_DOTFILES_DIR/emacs/init.el" "$HOME/.emacs.d/init.el"
 
+# Xfce4-Terminal
+mkdir -p $HOME/.config/xfce4/terminal
 ln -fs "$ROOT_DOTFILES_DIR/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/terminal/terminalrc"
 
 # Xresources
@@ -77,6 +83,7 @@ xrdb ~/.Xresources
 ln -fs "$ROOT_DOTFILES_DIR/screen/.screenrc" "$HOME/.screenrc"
 
 # Midnight Commander
+mkdir -p $HOME/.config/mc
 ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
 
 echo "Bootstrapping completed"
