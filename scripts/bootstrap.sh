@@ -79,4 +79,7 @@ ln -fs "$ROOT_DOTFILES_DIR/screen/.screenrc" "$HOME/.screenrc"
 # Midnight Commander
 ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
 
+# Profile
+ln -fs "$ROOT_DOTFILES_DIR/env/.profile" "$HOME/.profile"
+
 echo "Bootstrapping completed"
