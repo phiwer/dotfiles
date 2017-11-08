@@ -24,7 +24,7 @@ do
     case $opt in
         "Desktop Home")
             echo "You selected home configuration"
-	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-home"
+	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-desktop"
 	    break
             ;;
         "Thinkpad")
