@@ -17,6 +17,7 @@ ln -fs "$ROOT_DOTFILES_DIR/fonts" "$HOME/.fonts"
 
 # I3
 I3_SOURCE_CONFIG_FILE=""
+SCREEN_LAYOUT_CONFIG_FILE=""
 PS3='Please enter your i3 config choice: '
 options=("Desktop Home" "Thinkpad" "Desktop Work" "Quit")
 select opt in "${options[@]}"
@@ -24,17 +25,20 @@ do
     case $opt in
         "Desktop Home")
             echo "You selected home configuration"
-	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-desktop"
+	        I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-desktop"
+            SCREEN_LAYOUT_CONFIG_FILE="$ROOT_DOTFILES_DIR/screenlayout/set-screen-layout-home.sh"
 	    break
             ;;
         "Thinkpad")
             echo "You selected thinkpad configuration"
-	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-thinkpad"
+	        I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-thinkpad"
+            SCREEN_LAYOUT_CONFIG_FILE="$ROOT_DOTFILES_DIR/screenlayout/set-screen-layout-volvo.sh"
 	    break
             ;;
         "Desktop Work")
             echo "You selected work configuration"
-	    I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-work"
+	        I3_SOURCE_CONFIG_FILE="$ROOT_DOTFILES_DIR/i3/config-work"
+            SCREEN_LAYOUT_CONFIG_FILE="$ROOT_DOTFILES_DIR/screenlayout/set-screen-layout-volvo.sh"
 	    break
             ;;
         "Quit")
@@ -48,6 +52,10 @@ done
 I3_SYMLINK_CONFIG_FILE="$HOME/.config/i3/config"
 ln -fs $I3_SOURCE_CONFIG_FILE $I3_SYMLINK_CONFIG_FILE
 echo "i3 config file symlinked: $I3_SYMLINK_CONFIG_FILE -> $I3_SOURCE_CONFIG_FILE"
+
+SCREEN_LAYOUT_SYMLINK_CONFIG_FILE="$HOME/dotfiles/screenlayout/set-screen-layout.sh"
+ln -fs $SCREEN_LAYOUT_CONFIG_FILE $SCREEN_LAYOUT_SYMLINK_CONFIG_FILE
+
 
 # ZShell
 ZSH_PATH=`which zsh`
