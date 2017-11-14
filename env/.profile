@@ -1,5 +1,3 @@
-#export $SCREENLAYOUT="/home/phiwer/dotfiles/screenlayout/virtual-dell.sh"
-
 if [ $HOST = "GOT120FRM0YF2" ]
 then
     export http_proxy="http://gotpr002vip.got.volvocars.net:83"
