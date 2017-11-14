@@ -86,11 +86,15 @@ source $ZSH/oh-my-zsh.sh
 
 alias VIP='sudo minicom -D /dev/ttyVIP'
 alias MP='sudo minicom -D /dev/ttyMP'
+alias ff='find . -type f -iname'
+#alias ffrm TODO
 
 function setup_droid_env() {
     cd ~/source/android_icup
-    . build/envsetup.sh
-    lunch 31
+    source build/envsetup.sh
+    #lunch ihu_vcc-eng
 }
 
-alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch 31'
+alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch ihu_vcc-eng'
+
+export PYTHONPATH=/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
