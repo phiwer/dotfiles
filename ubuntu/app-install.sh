@@ -71,5 +71,11 @@ sudo apt install openjdk-8-jdk
 # Curl
 sudo apt install curl
 
+# Pidgin
+sudo apt install pidgin pidgin-sipe
+
+# I2C Tools
+sudo apt install i2c-tools
+
 # Npm
 # Nodejs
