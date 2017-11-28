@@ -18,7 +18,7 @@ set $sidescreen DP-0
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:mono 8
-font pango:Robot Mono 10
+font pango:Robot Mono 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -215,6 +215,8 @@ assign [class="^Spotify"] → $wsmedia
 assign [class="^Gnome-control-center\.real$"] → $wsmedia
 assign [class="^Sublime_text$"] → $wsdev
 assign [class="^.*jetbrains-pycharm.*$"] → $wsdev
+assign [class="^.*emacs*$"] → $wsdev
+assign [class="^.*code*$"] → $wsdev
 assign [class="^Google-chrome$"] → $wsweb
 assign [class="^libreoffice-writer$"] → $wsoffice
 assign [class="^mc$"] → $wsfile

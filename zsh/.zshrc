@@ -84,8 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias VIP='sudo minicom -D /dev/ttyVIP'
-alias MP='sudo minicom -D /dev/ttyMP'
+alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
+alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
 alias ff='find . -type f -iname'
 #alias ffrm TODO
 
@@ -95,6 +95,28 @@ function setup_droid_env() {
     #lunch ihu_vcc-eng
 }
 
+./prebuilts/misc/linux-x86/ccache/ccache -
+
 alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch ihu_vcc-eng'
+
+function set_cpu_gov()
+{
+    gov=$1
+    # To get available governors (this differs from system to system): run "cpufreq-info"
+    #
+    # I only have performance and powersave, usually these are also available:
+    # * performance     Run the CPU at the maximum frequency.
+    # * powersave     Run the CPU at the minimum frequency.
+    # * userspace     Run the CPU at user specified frequencies.
+    # * ondemand     Scales the frequency dynamically according to current load. Jumps to the highest frequency and then possibly back off as the idle time increases.
+    # * conservative     Scales the frequency dynamically according to current load. Scales the frequency more gradually than ondemand.
+    # * schedutil     Scheduler-driven CPU frequency selection [1], [2].
+    for i in {0..7};
+    do
+        sudo cpufreq-set -c $i -g $gov;
+    done
+}
+
+set_cpu_gov performance
 
 export PYTHONPATH=/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/

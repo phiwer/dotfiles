@@ -97,4 +97,7 @@ ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
 # Profile
 ln -fs "$ROOT_DOTFILES_DIR/env/.profile" "$HOME/.profile"
 
+# Log directory
+mkdir -p "$HOME/logs/minicom"
+
 echo "Bootstrapping completed"

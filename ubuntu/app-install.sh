@@ -77,5 +77,14 @@ sudo apt install pidgin pidgin-sipe
 # I2C Tools
 sudo apt install i2c-tools
 
+# Silver Searcher
+sudo apt install silversearcher-ag
+
+# Cpu Frequtils
+sudo apt install cpufrequtils
+
 # Npm
 # Nodejs
+
+# Global
+sudo apt-get install global
