@@ -71,15 +71,16 @@ sudo apt -qq install -y libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-u
 
 # Python
 sudo apt -qq install -y python-pip python-dev build-essential
+sudo apt -qq install -y python3-pip
 sudo pip install --upgrade pip
 sudo pip install --upgrade pip3
 sudo pip install --upgrade virtualenv
 
 # Numpy & Scipy
-sudo pip install -y numpy scipy
+sudo pip install numpy scipy
 
 # Scikit learn
-sudo pip install -y -U scikit-learn
+sudo pip install -U scikit-learn
 
 # Pywal
 sudo pip3 install -y pywal

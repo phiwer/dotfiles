@@ -79,6 +79,10 @@ fi
 
 ln -fs "$ROOT_DOTFILES_DIR/emacs/init.el" "$HOME/.emacs.d/init.el"
 
+ln -fs "$ROOT_DOTFILES_DIR/emacs/themes" "$HOME/.emacs.d/themes"
+
+ln -fs "$ROOT_DOTFILES_DIR/emacs/custom" "$HOME/.emacs.d/custom"
+
 # Xfce4-Terminal
 mkdir -p $HOME/.config/xfce4/terminal
 ln -fs "$ROOT_DOTFILES_DIR/xfce4/terminal/terminalrc" "$HOME/.config/xfce4/terminal/terminalrc"
