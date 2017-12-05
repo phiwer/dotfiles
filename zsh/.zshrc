@@ -95,7 +95,7 @@ function setup_droid_env() {
     #lunch ihu_vcc-eng
 }
 
-./prebuilts/misc/linux-x86/ccache/ccache -
+#./prebuilts/misc/linux-x86/ccache/ccache -
 
 alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch ihu_vcc-eng'
 
@@ -117,6 +117,27 @@ function set_cpu_gov()
     done
 }
 
-set_cpu_gov performance
+#set_cpu_gov performance
 
-export PYTHONPATH=/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
+export PYTHONPATH=/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/:~/Apps/android-studio/bin
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/home/phiwer/dev"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/home/phiwer/dev/cocos2d-x-3.16/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable NDK_ROOT for cocos2d-x
+export NDK_ROOT="/home/phiwer/Android/Sdk/ndk-bundle"
+export PATH=$NDK_ROOT:$PATH
+
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT="/home/phiwer/Android/Sdk"
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH

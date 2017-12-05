@@ -34,6 +34,7 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
 
 (require 'setup-general)
+
 (if (version< emacs-version "24.4")
     (require 'setup-ivy-counsel)
   (require 'setup-helm)
