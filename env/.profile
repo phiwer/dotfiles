@@ -6,3 +6,5 @@ then
 fi
 
 ccache -M 50GB
+
+wal -R -t
