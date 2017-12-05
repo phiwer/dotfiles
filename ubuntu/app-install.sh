@@ -22,6 +22,8 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
 
+sudo add-apt-repository ppa:aguignard/ppa
+
 sudo apt update
 
 sudo apt upgrade
@@ -120,3 +122,6 @@ sudo apt -qq install -y cmake
 
 # Ant
 sudo apt -qq install -y ant
+
+# Remove unused packages
+#sudo apt autoremove
