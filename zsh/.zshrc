@@ -119,7 +119,9 @@ function set_cpu_gov()
 
 #set_cpu_gov performance
 
-export PYTHONPATH=/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/:~/Apps/android-studio/bin
+export PATH=$PATH:~/Android/android-studio/bin
+
+export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
@@ -141,3 +143,12 @@ export PATH=$NDK_ROOT:$PATH
 export ANDROID_SDK_ROOT="/home/phiwer/Android/Sdk"
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+# Add environment variable ANT_ROOT to cocos2d-x
+export ANT_ROOT="/usr/bin/"
+export PATH=$ANT_ROOT:$PATH
+
+export USE_CCACHE=1
+export NDK_CCACHE=/usr/bin/ccache
+
+(wal -r -t &)
