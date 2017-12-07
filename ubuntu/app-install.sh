@@ -123,5 +123,8 @@ sudo apt -qq install -y cmake
 # Ant
 sudo apt -qq install -y ant
 
+# Gimp
+sudo apt -qq install -y gimp
+
 # Remove unused packages
 #sudo apt autoremove
