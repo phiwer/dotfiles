@@ -98,8 +98,9 @@ ln -fs "$ROOT_DOTFILES_DIR/screen/.screenrc" "$HOME/.screenrc"
 mkdir -p $HOME/.config/mc
 ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
 
-# Profile
+# Profiles
 ln -fs "$ROOT_DOTFILES_DIR/env/.profile" "$HOME/.profile"
+ln -fs "$ROOT_DOTFILES_DIR/env/.zprofile" "$HOME/.zprofile"
 
 # Log directory
 mkdir -p "$HOME/logs/minicom"
