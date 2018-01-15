@@ -48,6 +48,7 @@ do
     esac
 done
 
+mkdir -p "$HOME/.config/i3"
 
 I3_SYMLINK_CONFIG_FILE="$HOME/.config/i3/config"
 ln -fs $I3_SOURCE_CONFIG_FILE $I3_SYMLINK_CONFIG_FILE
@@ -76,6 +77,8 @@ if [ -f ~/.emacs.d/init.el ]; then
     rm ~/.emacs.d/init.el
     echo "Deleted old emacs init.el file"
 fi
+
+mkdir -p "$HOME/.emacs.d"
 
 ln -fs "$ROOT_DOTFILES_DIR/emacs/init.el" "$HOME/.emacs.d/init.el"
 

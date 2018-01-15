@@ -85,7 +85,7 @@ sudo pip install numpy scipy
 sudo pip install -U scikit-learn
 
 # Pywal
-sudo pip3 install -y pywal
+sudo pip3 install pywal
 
 # Java
 sudo apt -qq install -y openjdk-8-jdk
