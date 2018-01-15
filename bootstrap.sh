@@ -2,7 +2,7 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ROOT_DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+ROOT_DOTFILES_DIR=$SCRIPT_DIR
 
 echo "Starting bootstrapping"
 
@@ -98,8 +98,9 @@ ln -fs "$ROOT_DOTFILES_DIR/screen/.screenrc" "$HOME/.screenrc"
 mkdir -p $HOME/.config/mc
 ln -fs "$ROOT_DOTFILES_DIR/mc/ini" "$HOME/.config/mc/ini"
 
-# Profile
+# Profiles
 ln -fs "$ROOT_DOTFILES_DIR/env/.profile" "$HOME/.profile"
+ln -fs "$ROOT_DOTFILES_DIR/env/.zprofile" "$HOME/.zprofile"
 
 # Log directory
 mkdir -p "$HOME/logs/minicom"
