@@ -89,15 +89,10 @@ alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
 alias ff='find . -type f -iname'
 #alias ffrm TODO
 
-function setup_droid_env() {
-    cd ~/source/android_icup
-    source build/envsetup.sh
-    #lunch ihu_vcc-eng
-}
-
 #./prebuilts/misc/linux-x86/ccache/ccache -
 
-alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh && lunch ihu_vcc-eng'
+alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
+alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
 
 function set_cpu_gov()
 {
@@ -118,6 +113,14 @@ function set_cpu_gov()
 }
 
 #set_cpu_gov performance
+
+
+if [[ $HOST == 'GOT120FRM0YF2' ]]
+then
+    export http_proxy="http://gotpr002vip.got.volvocars.net:83"
+    export https_proxy="https://gotpr002vip.got.volvocars.net:83"
+    export no_proxy="*.volvocars.net"
+fi
 
 export PATH=$PATH:~/Android/android-studio/bin
 
