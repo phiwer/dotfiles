@@ -28,6 +28,9 @@ sudo apt update
 
 sudo apt upgrade
 
+# Hexchat
+sudo apt -qq install -y hexchat
+
 # Chrome
 sudo apt -qq install -y google-chrome-stable
 
@@ -134,6 +137,26 @@ sudo apt -qq install -y cppcheck
 
 # meld
 sudo apt -qq install -y meld
+
+# Docker
+sudo apt -qq remove -y docker docker-engine docker.io
+
+sudo apt -qq install -y \
+     apt-transport-https \
+     ca-certificates \
+     curl \
+     software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key -y add -
+
+sudo add-apt-repository \
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+sudo apt update
+
+sudo apt-get -qq install -y docker-ce
 
 # Remove unused packages
 #sudo apt autoremove
