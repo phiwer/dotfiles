@@ -156,7 +156,9 @@ sudo add-apt-repository \
 
 sudo apt update
 
-sudo apt-get -qq install -y docker-ce
+sudo apt -qq install -y docker-ce
+
+sudo apt install fonts-powerline
 
 # Remove unused packages
 #sudo apt autoremove
