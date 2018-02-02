@@ -7,6 +7,6 @@ fi
 
 ccache -M 50GB
 
-wal -R -t
+#wal -R -t
 
-xinput --disable 11
+#xinput --disable 11
