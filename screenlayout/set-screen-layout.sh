@@ -1,1 +1,1 @@
-/home/pwerner/dotfiles/screenlayout/set-screen-layout-volvo.sh
+/home/phiwer/dotfiles/screenlayout/set-screen-layout-home.sh
