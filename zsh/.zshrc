@@ -153,5 +153,3 @@ export PATH=$ANT_ROOT:$PATH
 
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/bin/ccache
-
-(wal -r -t &)
