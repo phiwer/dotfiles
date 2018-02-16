@@ -10,3 +10,5 @@ ccache -M 50GB
 #wal -R -t
 
 #xinput --disable 11
+
+export PATH=$PATH:~/Apps/pycharm-community-2017.3.2/bin
