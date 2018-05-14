@@ -110,7 +110,21 @@ function set_cpu_gov()
     done
 }
 
-#set_cpu_gov performance
+function tidinfo()
+{
+    export http_proxy=""
+    export https_proxy=""
+    firefox&
+}
+
+function proxy_off() {
+    export http_proxy=""
+    export https_proxy=""
+    export ftp_proxy=""
+    export HTTP_PROXY=""
+    export HTTPS_PROXY=""
+    export FTP_PROXY=""
+}
 
 
 if [[ $HOST == 'GOT120FRM0YF2' ]]
@@ -126,7 +140,7 @@ then
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 fi
 
-export PATH=$PATH:~/Android/android-studio/bin
+export PATH=$PATH:~/Applications/android-studio/bin
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
