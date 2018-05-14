@@ -158,6 +158,10 @@ sudo apt -qq install -y docker-ce
 
 sudo apt -qq install -y fonts-powerline
 
+# Edid
+
+sudo apt -qq install -y read-edid
+
 # Remove unused packages
 #sudo apt autoremove
 
