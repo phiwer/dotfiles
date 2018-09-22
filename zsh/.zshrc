@@ -88,15 +88,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
-alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
-alias ff='find . -type f -iname'
 #alias ffrm TODO
 
 #./prebuilts/misc/linux-x86/ccache/ccache -
-
-alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
-alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
 
 function set_cpu_gov()
 {
@@ -121,14 +115,18 @@ function set_cpu_gov()
 
 if [[ $HOST == 'GOT120FRM0YF2' ]]
 then
+    alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
+    alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
+    alias ff='find . -type f -iname'
+    alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
+    alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
     export http_proxy="http://gotpr002vip.got.volvocars.net:83"
     export https_proxy="https://gotpr002vip.got.volvocars.net:83"
     export no_proxy="*.volvocars.net"
+    export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 fi
 
 export PATH=$PATH:~/Android/android-studio/bin
-
-export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
