@@ -108,4 +108,7 @@ ln -fs "$ROOT_DOTFILES_DIR/env/.zprofile" "$HOME/.zprofile"
 # Log directory
 mkdir -p "$HOME/logs/minicom"
 
+# Polypar
+ln -fs "$ROOT_DOTFILES_DIR/polybar/config" "$HOME/.config/polybar/config"
+
 echo "Bootstrapping completed"

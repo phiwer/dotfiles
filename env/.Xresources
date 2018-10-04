@@ -1,3 +1,5 @@
+*.font: xft:Roboto Mono Medium for Powerline:pixelsize=13:weight=bold;0
+
 ! monochromatic colors for rofi
 rofi.color-enabled: true
 rofi.separator-style: none               

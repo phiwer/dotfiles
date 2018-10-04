@@ -163,3 +163,20 @@ sudo apt -qq install -y fonts-powerline
 
 git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts
 cd /tmp/powerline-fonts && ./install.sh && cd && rm -rf /tmp/powerline-fonts
+
+sudo apt -qq install -y libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev
+sudo apt -qq install -y libcairo2-dev
+sudo apt -qq install -y cmake cmake-data pkg-config
+sudo apt -qq install -y python-xcbgen xcb-proto
+sudo apt -qq install -y libxcb-image0-dev
+sudo apt -qq install -y libxcb-ewmh-dev libxcb-icccm4-dev
+sudo apt -qq install -y libjsoncpp-dev
+
+git clone --branch 3.2 --recursive https://github.com/jaagr/polybar /tmp/polybar
+cd /tmp/polybar
+mkdir build
+cd build
+cmake ..
+sudo make install
+
+sudo apt-get -qq install -y xkeycaps
