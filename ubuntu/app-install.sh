@@ -24,6 +24,13 @@ sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
 
 sudo add-apt-repository ppa:aguignard/ppa
 
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key -y add -
+
+sudo add-apt-repository \
+     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
 sudo apt update
 
 sudo apt upgrade
@@ -147,18 +154,12 @@ sudo apt -qq install -y \
      curl \
      software-properties-common
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key -y add -
-
-sudo add-apt-repository \
-     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-
-sudo apt update
-
 sudo apt -qq install -y docker-ce
 
-sudo apt install fonts-powerline
+sudo apt -qq install -y fonts-powerline
 
 # Remove unused packages
 #sudo apt autoremove
+
+git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts
+cd /tmp/powerline-fonts && ./install.sh && cd && rm -rf /tmp/powerline-fonts

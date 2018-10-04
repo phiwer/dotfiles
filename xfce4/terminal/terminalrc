@@ -1,5 +1,5 @@
 [Configuration]
-FontName=Roboto Mono 11
+FontName=Roboto Mono Medium for Powerline Medium 13
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBordersDefault=TRUE
@@ -17,10 +17,10 @@ MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
 MiscScrollAlternateScreen=TRUE
-BackgroundDarkness=0,660000
-ColorPalette=#002b36;#dc322f;#859900;#b58900;#268bd2;#6c71c4;#2aa198;#93a1a1;#657b83;#dc322f;#859900;#b58900;#268bd2;#6c71c4;#2aa198;#fdf6e3
-ColorForeground=#93a1a1
-ColorCursor=x
-ColorBackground=#002b36
+BackgroundDarkness=1,000000
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+ColorForeground=#dcdcdc
+ColorBackground=#2c2c2c
+ColorCursor=#dcdcdc
+ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff
 
