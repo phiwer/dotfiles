@@ -11,6 +11,7 @@
 
 set $mod Mod4
 
+new_window 1pixel
 
 # Set screen logical names
 set $mainscreen DP-5

@@ -219,6 +219,8 @@ assign [class="^Google-chrome$"] → $wsweb
 assign [class="^libreoffice-writer$"] → $wsoffice
 assign [class="^mc$"] → $wsfile
 
+new_window 1pixel
+
 exec ~/dotfiles/screenlayout/set-screen-layout.sh
 
 # autostart
