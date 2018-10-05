@@ -90,12 +90,6 @@ source $ZSH/oh-my-zsh.sh
 
 #alias ffrm TODO
 
-#./prebuilts/misc/linux-x86/ccache/ccache -
-
-alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
-
-alias vccdocker_local='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
-
 function set_cpu_gov()
 {
     gov=$1
@@ -114,7 +108,7 @@ function set_cpu_gov()
     done
 }
 
-set_cpu_gov performance
+#set_cpu_gov performance
 
 function firefox_noproxy()
 {
@@ -132,8 +126,6 @@ function proxy_off() {
     export FTP_PROXY=""
 }
 
-<<<<<<< 9da514ca615f336736fd4e9e12393447d0dfd7f6
-=======
 function proxy_on() {
     export http_proxy="http://gotpr002vip.got.volvocars.net:83"
     export https_proxy="https://gotpr002vip.got.volvocars.net:83"
@@ -142,20 +134,21 @@ function proxy_on() {
 }
 
 function disable_touchpad() {
-    echo bajs
     if [ `hostname` = "GOT120FRM0YF2" ]; then
         xinput list  | grep DualPoint | grep -Eo '=[0-9]{1,4}' | grep -Eo '[0-9]{1,4}' | cat | xargs -I % xinput disable %
     fi
 }
 
 disable_touchpad
->>>>>>> Working volvo display
 
 if [[ $HOST == 'GOT120FRM0YF2' ]]
 then
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
     alias ff='find . -type f -iname'
+    alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
+
+    alias vccdocker_local='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
     alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
     alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
     export http_proxy="http://gotpr002vip.got.volvocars.net:83"
@@ -164,38 +157,38 @@ then
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 fi
 
-<<<<<<< 9da514ca615f336736fd4e9e12393447d0dfd7f6
+if [[ $HOST == 'nexus' ]]
+then
+
+    # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+    export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
+    export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+    # Add environment variable COCOS_X_ROOT for cocos2d-x
+    export COCOS_X_ROOT="/home/phiwer/dev"
+    export PATH=$COCOS_X_ROOT:$PATH
+
+    # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+    export COCOS_TEMPLATES_ROOT="/home/phiwer/dev/cocos2d-x-3.16/templates"
+    export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+    # Add environment variable NDK_ROOT for cocos2d-x
+    export NDK_ROOT="/home/phiwer/Android/Sdk/ndk-bundle"
+    export PATH=$NDK_ROOT:$PATH
+
+    # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+    export ANDROID_SDK_ROOT="/home/phiwer/Android/Sdk"
+    export PATH=$ANDROID_SDK_ROOT:$PATH
+    export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+    # Add environment variable ANT_ROOT to cocos2d-x
+    export ANT_ROOT="/usr/bin/"
+    export PATH=$ANT_ROOT:$PATH
+
+fi
+
 export PATH=$PATH:~/Applications/android-studio/bin
-=======
 export PATH=$PATH:~/Applications/pycharm-community-2018.2.2/bin
-
-export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
->>>>>>> Working volvo display
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT="/home/phiwer/dev"
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT="/home/phiwer/dev/cocos2d-x-3.16/templates"
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
-# Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT="/home/phiwer/Android/Sdk/ndk-bundle"
-export PATH=$NDK_ROOT:$PATH
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT="/home/phiwer/Android/Sdk"
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# Add environment variable ANT_ROOT to cocos2d-x
-export ANT_ROOT="/usr/bin/"
-export PATH=$ANT_ROOT:$PATH
 
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/bin/ccache
