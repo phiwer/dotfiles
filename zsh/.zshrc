@@ -155,7 +155,9 @@ then
     export https_proxy="https://gotpr002vip.got.volvocars.net:83"
     export no_proxy="*.volvocars.net"
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
+    export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 fi
+
 
 if [[ $HOST == 'nexus' ]]
 then
