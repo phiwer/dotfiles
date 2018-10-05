@@ -74,6 +74,8 @@
 
 (require 'color-theme-sanityinc-tomorrow)
 
+(setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
+
 (menu-bar-mode -1) ;; hide menu bar
 (tool-bar-mode -1) ;; hide tool bar
 (setq inhibit-startup-message t) ;; hide the startup message

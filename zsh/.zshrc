@@ -92,6 +92,10 @@ source $ZSH/oh-my-zsh.sh
 
 #./prebuilts/misc/linux-x86/ccache/ccache -
 
+alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
+
+alias vccdocker_local='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
+
 function set_cpu_gov()
 {
     gov=$1
@@ -110,7 +114,9 @@ function set_cpu_gov()
     done
 }
 
-function tidinfo()
+set_cpu_gov performance
+
+function firefox_noproxy()
 {
     export http_proxy=""
     export https_proxy=""
@@ -126,6 +132,24 @@ function proxy_off() {
     export FTP_PROXY=""
 }
 
+<<<<<<< 9da514ca615f336736fd4e9e12393447d0dfd7f6
+=======
+function proxy_on() {
+    export http_proxy="http://gotpr002vip.got.volvocars.net:83"
+    export https_proxy="https://gotpr002vip.got.volvocars.net:83"
+    export HTTP_PROXY="http://gotpr002vip.got.volvocars.net:83"
+    export HTTPS_PROXY="https://gotpr002vip.got.volvocars.net:83"
+}
+
+function disable_touchpad() {
+    echo bajs
+    if [ `hostname` = "GOT120FRM0YF2" ]; then
+        xinput list  | grep DualPoint | grep -Eo '=[0-9]{1,4}' | grep -Eo '[0-9]{1,4}' | cat | xargs -I % xinput disable %
+    fi
+}
+
+disable_touchpad
+>>>>>>> Working volvo display
 
 if [[ $HOST == 'GOT120FRM0YF2' ]]
 then
@@ -140,7 +164,13 @@ then
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
 fi
 
+<<<<<<< 9da514ca615f336736fd4e9e12393447d0dfd7f6
 export PATH=$PATH:~/Applications/android-studio/bin
+=======
+export PATH=$PATH:~/Applications/pycharm-community-2018.2.2/bin
+
+export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
+>>>>>>> Working volvo display
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="/home/phiwer/dev/cocos2d-x-3.16/tools/cocos2d-console/bin"

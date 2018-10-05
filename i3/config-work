@@ -15,6 +15,9 @@ set $mod Mod4
 set $mainscreen DP-5
 set $sidescreen DP-0
 
+# Set default workspace to tabbed
+workspace_layout tabbed
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:mono 8
@@ -134,7 +137,7 @@ bindsym $mod+Shift+9 move container to workspace $wsmisc
 bindsym $mod+Shift+0 move container to workspace $wsrobot
 
 # define workspace to main/sidescreen
-workspace "$wsterm" output $sidescreen
+workspace "$wsterm" output $mainscreen
 workspace "$wsweb"  output $mainscreen
 workspace "$wsdev"  output $mainscreen
 workspace "$wsmail" output $mainscreen
@@ -203,28 +206,30 @@ bar {
 }
 
 # assign specific windows to workspaces
-assign [class="^Skype$"] → $wschat
-assign [class="^Firefox$"] → $wsweb
-assign [class="^Thunderbird$"] → $wsmail
-assign [class="^Gnome-terminal$"] → $wsterm
-assign [class="^Xfce4-terminal$"] → $wsterm
-assign [class="^Nautilus$"] → $wsfile
-assign [class="^Nemo$"] → $wsfile
-assign [class="^banshee$"] → $wsmedia
-assign [class="^Spotify"] → $wsmedia
-assign [class="^Gnome-control-center\.real$"] → $wsmedia
-assign [class="^Sublime_text$"] → $wsdev
-assign [class="^.*jetbrains-pycharm.*$"] → $wsdev
-assign [class="^.*emacs*$"] → $wsdev
-assign [class="^.*code*$"] → $wsdev
-assign [class="^Google-chrome$"] → $wsweb
-assign [class="^libreoffice-writer$"] → $wsoffice
-assign [class="^mc$"] → $wsfile
+assign [class="^Skype$"] $wschat
+assign [class="^Firefox$"] $wsweb
+assign [class="^Thunderbird$"] $wsmail
+assign [class="^Gnome-terminal$"] $wsterm
+assign [class="^Xfce4-terminal$"] $wsterm
+assign [class="^Nautilus$"] $wsfile
+assign [class="^Nemo$"] $wsfile
+assign [class="^banshee$"] $wsmedia
+assign [class="^Spotify"] $wsmedia
+assign [class="^Gnome-control-center\.real$"] $wsmedia
+assign [class="^Sublime_text$"] $wsdev
+assign [class="sublime-text|Atom|jetbrains-android-studio"] $wsdev
+assign [class="^.*jetbrains-pycharm.*$"] $wsdev
+assign [class="^.*emacs*$"] $wsdev
+assign [class="^.*code*$"] $wsdev
+assign [class="^Google-chrome$"] $wsweb
+assign [class="^libreoffice-writer$"] $wsoffice
+assign [class="^mc$"] $wsfile
 
-exec ~/dotfiles/screenlayout/set-screen-layout.sh
+focus_follows_mouse no
+
+exec ~/dotfiles/screenlayout/volvo-one-screen.sh
 
 # autostart
-#exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/michael/.config.i3/workspace-1.json'"
 exec --no-startup-id i3-msg 'workspace $wsterm; exec /usr/bin/i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $wsmail; exec /usr/bin/thunderbird'
 exec --no-startup-id i3-msg 'workspace $wsweb; exec /usr/bin/google-chrome'
