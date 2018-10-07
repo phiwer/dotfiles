@@ -9,7 +9,7 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 # I3 Repo
 /usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2018.01.30_all.deb keyring.deb SHA256:baa43dbbd7232ea2b5444cae238d53bebb9d34601cc000e82f11111b1889078a
 sudo dpkg -i ./keyring.deb
-sudo echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
+echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee --append /etc/apt/sources.list.d/sur5r-i3.list
 
 # Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -17,17 +17,22 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
 # Add FS-UAE repository
-sudo echo "deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_9.0/ /" > /etc/apt/sources.list.d/FrodeSolheim-stable.list
+echo "deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_9.0/ /" | sudo tee /etc/apt/sources.list.d/FrodeSolheim-stable.list
 wget -q -O - http://download.opensuse.org/repositories/home:FrodeSolheim:stable/Debian_9.0/Release.key | apt-key add -
 
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
 
 sudo add-apt-repository ppa:aguignard/ppa
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key -y add -
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+#sudo add-apt-repository \
+#     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+#   $(lsb_release -cs) \
+#   stable"
 
 sudo add-apt-repository \
-     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
 
@@ -155,6 +160,7 @@ sudo apt -qq install -y \
      apt-transport-https \
      ca-certificates \
      curl \
+     gnupg2 \
      software-properties-common
 
 sudo apt -qq install -y docker-ce
