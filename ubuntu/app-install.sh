@@ -20,6 +20,10 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 # 2. Add the Spotify repository
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
+# Add FS-UAE repository
+sudo echo "deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_9.0/ /" > /etc/apt/sources.list.d/FrodeSolheim-stable.list
+wget -q -O - http://download.opensuse.org/repositories/home:FrodeSolheim:stable/Debian_9.0/Release.key | apt-key add -
+
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa
 
 sudo add-apt-repository ppa:aguignard/ppa
@@ -34,6 +38,9 @@ sudo add-apt-repository \
 sudo apt update
 
 sudo apt upgrade
+
+# FS-UAE
+sudo apt -qq install -y fs-uae fs-uae-launcher fs-uae-arcade
 
 # Hexchat
 sudo apt -qq install -y hexchat
