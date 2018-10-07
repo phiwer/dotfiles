@@ -4,21 +4,17 @@
 
 # 1. Add the Spotify repository signing keys to be able to verify downloaded packages
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 # I3 Repo
-/usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2017.01.02_all.deb /tmp/keyring.deb SHA256:4c3c6685b1181d83efe3a479c5ae38a2a44e23add55e16a328b8c8560bf05e5f
-
-sudo dpkg -i /tmp/keyring.deb
-
-echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
+/usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2018.01.30_all.deb keyring.deb SHA256:baa43dbbd7232ea2b5444cae238d53bebb9d34601cc000e82f11111b1889078a
+sudo dpkg -i ./keyring.deb
+sudo echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
 
 # Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-
-# 2. Add the Spotify repository
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 # Add FS-UAE repository
 sudo echo "deb http://download.opensuse.org/repositories/home:/FrodeSolheim:/stable/Debian_9.0/ /" > /etc/apt/sources.list.d/FrodeSolheim-stable.list
@@ -169,6 +165,18 @@ sudo apt -qq install -y fonts-powerline
 
 sudo apt -qq install -y read-edid
 
+# Iwdef
+sudo apt -qq install -y libiw-dev
+
+# Libalsa dev
+sudo apt -qq install -y libasound2-dev
+
+# Libpulse dev
+sudo apt -qq install -y libpulse-dev
+
+# Libnl
+sudo apt -qq install -y libnl-3-dev
+
 # Remove unused packages
 #sudo apt autoremove
 
@@ -183,11 +191,15 @@ sudo apt -qq install -y libxcb-image0-dev
 sudo apt -qq install -y libxcb-ewmh-dev libxcb-icccm4-dev
 sudo apt -qq install -y libjsoncpp-dev
 
+# TODO: Check if dir already exists. If so, do a git pull.
 git clone --branch 3.2 --recursive https://github.com/jaagr/polybar /tmp/polybar
 cd /tmp/polybar
+# TODO: Remove build if it already exists
 mkdir build
 cd build
 cmake ..
 sudo make install
 
 sudo apt-get -qq install -y xkeycaps
+
+sudo apt-get -qq install -y fonts-materialdesignicons-webfont

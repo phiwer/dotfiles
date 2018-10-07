@@ -6,5 +6,6 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
+
 # Launch polybar
-polybar top&
+FC_DEBUG=1 polybar top -l info

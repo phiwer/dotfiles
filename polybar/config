@@ -1,19 +1,24 @@
+
 [bar/top]
 width = 100%
 height = 40
 
-monitor = ${env:MONITOR:eDP-1}
+#monitor = $(polybar -m|tail -1|sed -e 's/:.*$//g')
 
 background = #141021
 foreground = #c4b7c5
 
 fixed-center = true
 
-font-0 = Roboto Mono Medium for Powerline:pixelsize=13:weight=bold;0
+Roboto Mono Medium for Powerline:style=Medium,Regular
+font-0 = "Roboto Mono Medium for Powerline:style=Medium,Regular;pixelsize=12;1"
+#font-0 = "Roboto Mono Medium for Powerline:pixelsize=12;1"
+#font-0 = Roboto Mono for Powerline:size=11;1
+#font-1 = PragmataPro Nerd Font:pixelsize=12:weight=bold;0
 
 modules-left = i3
 modules-center = date
-modules-right = wireless-network cpu memory temperature pavolume backlight battery powermenu
+modules-right = wireless-network cpu memory temperature backlight battery powermenu
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -48,7 +53,7 @@ interval = 1
 format = <label>
 format-padding = 2
 
-label =  %percentage%%
+label = %percentage%%
 
 
 [module/memory]
@@ -59,7 +64,7 @@ interval = 1
 format = <label>
 format-padding = 2
 
-label =  %gb_used% (%percentage_used%%)
+label = %gb_used% (%percentage_used%%)
 
 
 [module/temperature]
@@ -103,7 +108,7 @@ time-alt = %H:%M:%S
 format = <label>
 format-padding = 2
 
-label =  %date% %time%
+label =  %date% %time%
 
 
 [module/battery]
@@ -153,7 +158,7 @@ card = intel_backlight
 format = <label>
 format-padding = 2
 
-label =  %percentage%%
+label = HELLO %percentage%%
 
 
 #[module/pavolume]
@@ -173,7 +178,7 @@ label =  %percentage%%
 [module/powermenu]
 type = custom/menu
 
-label-open = 
+label-open = 
 
 label-close = cancel
 
@@ -235,6 +240,6 @@ format-connected-padding = 2
 format-disconnected = <label-disconnected>
 format-disconnected-padding = 2
 
-label-connected =  %essid%
+label-connected =  %essid%
 
-label-disconnected =  None
+label-disconnected =  None
