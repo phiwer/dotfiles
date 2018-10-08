@@ -143,7 +143,7 @@ sudo apt -qq install -y ant
 
 # Gimp
 sudo apt -qq install -y gimp
-=======
+
 # Git Review
 sudo apt -qq install -y git-review
 

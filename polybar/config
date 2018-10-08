@@ -5,6 +5,9 @@ height = 40
 
 #monitor = $(polybar -m|tail -1|sed -e 's/:.*$//g')
 
+#monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:MONITOR:DP-4}
+
 background = #141021
 foreground = #c4b7c5
 
