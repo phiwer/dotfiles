@@ -1,1 +1,1 @@
-/home/phiwer/dotfiles/screenlayout/set-screen-layout-home.sh
+/home/phiwer/dotfiles/screenlayout/set-screen-layout-volvo.sh
