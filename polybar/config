@@ -10,8 +10,16 @@ foreground = #c4b7c5
 
 fixed-center = true
 
-Roboto Mono Medium for Powerline:style=Medium,Regular
+#Roboto Mono Medium for Powerline:style=Medium,Regular
+#font-0 = NotoSans-Regular:size=9;0
+#font-1 = Material\ Icons:size=11;2
+#font-2 = xos4\ Terminus:size=14;0
+#font-3 = Siji:pixelsize=11;1
 font-0 = "Roboto Mono Medium for Powerline:style=Medium,Regular;pixelsize=12;1"
+font-1 = "FontAwesome:size=12;0"
+font-2 = "PragmataPro Nerd Font:pixelsize=12:weight=bold;0"
+#font-1 =
+
 #font-0 = "Roboto Mono Medium for Powerline:pixelsize=12;1"
 #font-0 = Roboto Mono for Powerline:size=11;1
 #font-1 = PragmataPro Nerd Font:pixelsize=12:weight=bold;0
@@ -64,7 +72,7 @@ interval = 1
 format = <label>
 format-padding = 2
 
-label = %gb_used% (%percentage_used%%)
+label =  %gb_used% (%percentage_used%%)
 
 
 [module/temperature]
@@ -108,7 +116,7 @@ time-alt = %H:%M:%S
 format = <label>
 format-padding = 2
 
-label =  %date% %time%
+label =  %date% %time%
 
 
 [module/battery]
@@ -158,8 +166,10 @@ card = intel_backlight
 format = <label>
 format-padding = 2
 
-label = HELLO %percentage%%
+label =  %percentage%%
 
+#label-active-font = 2
+#label-inactive-font = 2
 
 #[module/pavolume]
 #type = custom/script
@@ -232,7 +242,7 @@ menu-2-0-padding-right = 3
 [module/wireless-network]
 type = internal/network
 
-interface = wlo1
+interface = wlan0
 
 format-connected = <label-connected>
 format-connected-padding = 2
@@ -240,6 +250,6 @@ format-connected-padding = 2
 format-disconnected = <label-disconnected>
 format-disconnected-padding = 2
 
-label-connected =  %essid%
+label-connected =  %essid%
 
-label-disconnected =  None
+label-disconnected =  None
