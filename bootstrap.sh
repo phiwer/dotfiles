@@ -8,8 +8,10 @@ echo "Starting bootstrapping"
 
 # Apt
 echo "Installing applications"
-APP_INSTALL_SCRIPT="$ROOT_DOTFILES_DIR/ubuntu/app-install.sh"
+APP_INSTALL_SCRIPT="$ROOT_DOTFILES_DIR/debian/app-install.sh"
 bash "$APP_INSTALL_SCRIPT"
+
+exit 0
 
 # Fonts
 echo "Symlinking fonts"
