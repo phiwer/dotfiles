@@ -151,8 +151,6 @@ then
     alias vccdocker_local='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
     alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
     alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
-    export http_proxy="http://gotpr002vip.got.volvocars.net:83"
-    export https_proxy="https://gotpr002vip.got.volvocars.net:83"
     export no_proxy="*.volvocars.net"
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
