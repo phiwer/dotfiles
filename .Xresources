@@ -1,8 +1,14 @@
 
-*.font: 				xft:Roboto Mono for Powerline:pixelsize=13:antialias=true:hinting=true
-*.boldFont: 				xft:Roboto Mono for Powerline:bold:pixelsize=13:antialias=true:hinting=true
-*.italicFont:				xft:Roboto Mono for Powerline:italic:pixelsize=13:antialias=true:hinting=true
-*.boldItalicFont:			xft:Roboto Mono for Powerline:bold:italic:pixelsize=13:antialias=true
+URxvt.font:           xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+URxvt.imFont:         xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+URxvt.boldFont:       xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+URxvt.italicFont:     xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+URxvt.boldItalicFont: xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+
+#*.font: 				xft:Roboto Mono for Powerline:pixelsize=15:antialias=true:hinting=true
+#*.boldFont: 				xft:Roboto Mono for Powerline:bold:pixelsize=15:antialias=true:hinting=true
+#*.italicFont:				xft:Roboto Mono for Powerline:italic:pixelsize=15:antialias=true:hinting=true
+#*.boldItalicFont:			xft:Roboto Mono for Powerline:bold:italic:pixelsize=15:antialias=true
 
 
 Xft.dpi:                        96
