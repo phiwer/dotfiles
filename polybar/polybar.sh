@@ -8,4 +8,4 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 
 # Launch polybar
-FC_DEBUG=1 polybar top -l info
+FC_DEBUG=1 polybar top -l info &
