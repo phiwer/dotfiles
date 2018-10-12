@@ -9,6 +9,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+gaps inner 4
+gaps outer 0
+
 set $mod Mod4
 
 # Set screen logical names
