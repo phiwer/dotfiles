@@ -206,9 +206,8 @@ new_window 1pixel
 
 # autostart
 exec_always --no-startup-id $HOME/.config/i3/startup.sh
-exec --no-startup-id i3-msg 'workspace $wsterm; exec /usr/bin/rxvt-unicode'
-exec --no-startup-id i3-msg 'workspace $wsmail; exec /usr/bin/thunderbird'
+#exec --no-startup-id i3-msg 'workspace $wsterm; exec /usr/bin/rxvt-unicode'
 exec --no-startup-id i3-msg 'workspace $wsweb; exec /usr/bin/google-chrome'
-exec --no-startup-id i3-msg 'workspace $wsdev; exec /usr/bin/emacs'
+#exec --no-startup-id i3-msg 'workspace $wsdev; exec /usr/bin/emacs'
 exec --no-startup-id i3-msg 'workspace $wsmedia; exec /usr/bin/spotify'
 

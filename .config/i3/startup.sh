@@ -2,7 +2,8 @@
 
 function main
 {
-    feh --bg-scale "$HOME/.local/share/wallpapers/1984.jpg"&
+    #feh --bg-scale "$HOME/.local/share/wallpapers/1984.jpg"&
+    wal -i "$HOME/.local/share/wallpapers/1984.jpg"&
 
     # Terminate already running bar instances
     killall -q polybar

@@ -9,7 +9,7 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="agnoster"
-ZSH_THEME="bullet-train"
+#ZSH_THEME="bullet-train"
 #ZSH_THEME="robbyrussell"
 
 export TERM="xterm-256color"
