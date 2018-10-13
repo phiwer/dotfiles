@@ -72,6 +72,8 @@
 ;;(require 'elpy)
 ;;(elpy-enable)
 
+(setq column-number-mode t)
+
 (require 'color-theme-sanityinc-tomorrow)
 
 (setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
