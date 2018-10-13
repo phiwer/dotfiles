@@ -5,8 +5,10 @@
 
 alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
-export WALLPAPERS="$HOME/Pictures/wallpapers"
+export WALLPAPERS="$HOME/wallpapers"
 
-export EXTERNAL="$HOME/external"
+export SOURCES="$HOME/sources"
+
+export EXTERNAL="$SOURCES/external"
 
 export TERMINAL="rxvt-unicode"
