@@ -5,6 +5,8 @@
 
 alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
+export APPS="$HOME/apps"
+
 export WALLPAPERS="$HOME/wallpapers"
 
 export SOURCES="$HOME/sources"
