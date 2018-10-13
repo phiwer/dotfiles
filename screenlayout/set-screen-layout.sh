@@ -1,1 +1,0 @@
-/home/phiwer/dotfiles/screenlayout/set-screen-layout-volvo.sh
