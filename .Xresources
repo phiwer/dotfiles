@@ -1,15 +1,15 @@
 
-URxvt.font:           xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
-URxvt.imFont:         xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
-URxvt.boldFont:       xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
-URxvt.italicFont:     xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
-URxvt.boldItalicFont: xft:Roboto Mono for Powerline:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
 
-#*.font: 				xft:Roboto Mono for Powerline:pixelsize=15:antialias=true:hinting=true
-#*.boldFont: 				xft:Roboto Mono for Powerline:bold:pixelsize=15:antialias=true:hinting=true
-#*.italicFont:				xft:Roboto Mono for Powerline:italic:pixelsize=15:antialias=true:hinting=true
-#*.boldItalicFont:			xft:Roboto Mono for Powerline:bold:italic:pixelsize=15:antialias=true
+!URxvt.font:           xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+!URxvt.imFont:         xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+!URxvt.boldFont:       xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+!URxvt.italicFont:     xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
+!URxvt.boldItalicFont: xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
 
+URxvt.font: xft:Roboto Mono for Powerline:size=14,xft:Roboto Mono:size=12
+URxvt.boldFont: xft:Roboto Mono for Powerline:bold:size=14,xft:Roboto Mono:bold:size=12
+URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=14,xft:Roboto Mono:italic:size=12
+URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=14, xft:Roboto Mono:bold:italic:size=12
 
 Xft.dpi:                        96
 Xft.antialias:                  1
@@ -21,8 +21,8 @@ Xft.rgba:                       rgb
 
 URxvt*termName:                 rxvt-256color
 URxvt.depth:                    32
-URxvt*lineSpace:                1
-URxvt.letterSpace:              -1
+URxvt*lineSpace:                2
+URxvt.letterSpace:              1
 URxvt.iso14755:                 false
 URxvt.iso14755_52:              false
 URxvt*geometry:                 65x17
@@ -70,19 +70,19 @@ URxvt.matcher.button:           1
 *.color15:      #ffeefc
 
 ! monochromatic colors for rofi
-rofi.color-enabled: true
-rofi.separator-style: none               
-rofi.color-window: #000000, #aaaaaa, #000000
-rofi.color-normal: #000000, #aaaaaa, #000000, #aaaaaa, #000000
-rofi.color-active: #000000, #aaaaaa, #000000, #aaaaaa, #000000
-rofi.color-urgent: #000000, #aaaaaa, #000000, #aaaaaa, #000000
+!rofi.color-enabled: true
+!rofi.separator-style: none
+!rofi.color-window: #000000, #aaaaaa, #000000
+!rofi.color-normal: #000000, #aaaaaa, #000000, #aaaaaa, #000000
+!rofi.color-active: #000000, #aaaaaa, #000000, #aaaaaa, #000000
+!rofi.color-urgent: #000000, #aaaaaa, #000000, #aaaaaa, #000000
 
 rofi.color-enabled: true
 rofi.color-window: #141021, #c16772, #9568a1
 rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
 rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
 rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
-rofi.font: Roboto Mono Medium for Powerline 13
+rofi.font: Roboto\ Mono 14
 rofi.width: 800
 rofi.padding: 50
 rofi.bw: 3
