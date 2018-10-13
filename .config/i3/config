@@ -207,6 +207,7 @@ new_window 1pixel
 # autostart
 exec_always --no-startup-id $HOME/shellscripts/screenlayout/set-screen-layout.sh
 exec_always --no-startup-id $HOME/shellscripts/polybar/polybar.sh
+exec_always --no-startup-id /usr/bin/compton
 exec --no-startup-id i3-msg 'workspace $wsterm; exec /usr/bin/rxvt-unicode'
 exec --no-startup-id i3-msg 'workspace $wsmail; exec /usr/bin/thunderbird'
 exec --no-startup-id i3-msg 'workspace $wsweb; exec /usr/bin/google-chrome'
