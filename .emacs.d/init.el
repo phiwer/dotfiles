@@ -91,7 +91,7 @@
 ;;(set-default-font "Inconsolata 11")
 ;;(set-default-font "FiraCode 11")
 ;;(set-default-font "Roboto Mono-11:weight=regular")
-(set-default-font "Roboto Mono:style=Regular")
+(set-default-font "Roboto Mono for Powerline:style=Regular")
 ;;(set-default-font "Hack:style=Regular")
 ;;(set-default-font "Source Code Pro:style=Regular")
 ;;(set-default-font "Roboto Medium 11")
