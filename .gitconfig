@@ -1,3 +1,9 @@
 [user]
 	name = Philip Werner
-	email = phiwer@gmail.com
+    email = phiwer@gmail.com
+[color]
+  ui = true
+[github]
+  user = phiwer
+[core]
+	editor = emacs
