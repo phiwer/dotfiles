@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Defines runtime environment
+#
+
+alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+
+alias studio="$APPS/android-studio/bin/studio.sh"
+
+alias pycharm="$APPS/pycharm/bin/studio.sh"
