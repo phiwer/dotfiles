@@ -3,7 +3,10 @@
 # Defines runtime environment
 #
 
-alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+export VISUAL=emacs
+
+export EDITOR="$VISUAL"
+
 
 export XDG_DATA_HOME="$HOME/.local/share"
 
