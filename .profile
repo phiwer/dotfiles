@@ -24,8 +24,12 @@ export EXTERNAL="$SOURCES/external"
 
 export COCOS2DX_HOME="$EXTERNAL/cocos2d-x"
 
+export NDK_ROOT="$HOME/Android/Sdk/ndk-bundle/"
+
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk/"
+
 
 export TERMINAL="rxvt-unicode"
 
 
-export PATH=$PATH:$APPS/android-studio/bin:$APPS/pycharm/bin:$APPS/clion/bin
+export PATH=$PATH:$APPS/android-studio/bin:$APPS/pycharm/bin:$EXTERNAL/cocos2d-x:$APPS/clion/bin
