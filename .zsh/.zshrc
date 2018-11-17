@@ -114,19 +114,17 @@ BULLETTRAIN_PROMPT_ORDER=(
     git
 )
 
-#context
-#time
-
 #set_cpu_gov performance
 
-function firefox_noproxy()
+function firefox_noproxy
 {
     export http_proxy=""
     export https_proxy=""
     firefox&
 }
 
-function proxy_off() {
+function proxy_off
+{
     export http_proxy=""
     export https_proxy=""
     export ftp_proxy=""
@@ -135,14 +133,16 @@ function proxy_off() {
     export FTP_PROXY=""
 }
 
-function proxy_on() {
+function proxy_on
+{
     export http_proxy="http://gotpr002vip.got.volvocars.net:83"
     export https_proxy="https://gotpr002vip.got.volvocars.net:83"
     export HTTP_PROXY="http://gotpr002vip.got.volvocars.net:83"
     export HTTPS_PROXY="https://gotpr002vip.got.volvocars.net:83"
 }
 
-function disable_touchpad() {
+function disable_touchpad
+{
     if [ `hostname` = "GOT120FRM0YF2" ]; then
         xinput list  | grep DualPoint | grep -Eo '=[0-9]{1,4}' | grep -Eo '[0-9]{1,4}' | cat | xargs -I % xinput disable %
     fi
@@ -201,3 +201,5 @@ export PATH=$PATH:~/Applications/pycharm-community-2018.2.2/bin
 
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/bin/ccache
+
+source ~/.aliases
