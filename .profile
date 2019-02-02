@@ -28,4 +28,4 @@ export COCOS2DX_HOME="$EXTERNAL/cocos2d-x"
 export TERMINAL="rxvt-unicode"
 
 
-export PATH=$PATH:$APPS/android-studio/bin:$APPS/pycharm/bin
+export PATH=$PATH:$APPS/android-studio/bin:$APPS/pycharm/bin:$APPS/clion/bin
