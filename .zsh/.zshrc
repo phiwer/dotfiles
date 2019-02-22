@@ -150,19 +150,17 @@ function disable_touchpad
 
 disable_touchpad
 
-if [[ $HOST == 'GOT120FRM0YF2' ]]
+if [[ $HOST == 'deathstar' ]]
 then
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
     alias ff='find . -type f -iname'
-    alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
+    alias vccdocker='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
 
-    alias vccdocker_local='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
-    alias vccdocker='~/source/android_icup/vendor/volvocars/tools/docker_build/run.sh'
-    alias vccdocker_int='~/source/android_icup_int/vendor/volvocars/tools/docker_build/run.sh'
+    alias vccdocker_local='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
+    alias vccdocker='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh'
     export no_proxy="*.volvocars.net"
-    export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
-    export PYTHONPATH=$PYTHONPATH:/home/pwerner/source/android_icup/test:/home/pwerner/source/android_icup/vendor/
+    export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/aosp/icup/test:/home/pwerner/sources/icup/vendor/
 fi
 
 
@@ -196,8 +194,9 @@ then
 
 fi
 
-export PATH=$PATH:~/Applications/android-studio/bin
-export PATH=$PATH:~/Applications/pycharm-community-2018.2.2/bin
+export PATH=$PATH:~/apps/android-studio/bin
+export PATH=$PATH:~/apps/pycharm-community-2018.2.2/bin
+export PATH=$PATH:~/bin
 
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/bin/ccache
