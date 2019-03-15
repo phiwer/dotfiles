@@ -7,4 +7,6 @@ alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
 alias studio="$APPS/android-studio/bin/studio.sh"
 
-alias pycharm="$APPS/pycharm/bin/studio.sh"
+alias pycharm="$APPS/pycharm/bin/pycharm.sh"
+
+alias set_brightness="sudo xrandr --output eDP-1 --brightness 0.5"
