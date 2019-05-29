@@ -4,6 +4,12 @@
 #
 
 alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+alias dots-ls='dots ls-files'
+alias dots-ls-untracked='dots status -u .'
+
+alias aud='sudo apt update'
+
+alias aup='sudo apt upgrade'
 
 alias studio="$APPS/android-studio/bin/studio.sh"
 
