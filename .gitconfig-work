@@ -1,0 +1,12 @@
+[user]
+    name = Werner, Philip
+    email = philip.werner@volvocars.com
+    username = PWERNER
+[credential]
+    helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[pull]
+    rebase = true
+[credential "https://icup_android.gerrit.cm.volvocars.biz"]
+    username = PWERNER
+[pager]
+    branch = false

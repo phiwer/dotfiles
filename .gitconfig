@@ -1,9 +1,12 @@
-[user]
-	name = Philip Werner
-    email = phiwer@gmail.com
 [color]
-  ui = true
+    ui = true
 [github]
-  user = phiwer
+    user = phiwer
 [core]
-	editor = emacs
+    editor = emacs
+
+[includeIf "gitdir:~/sources/aosp/icup/**"]
+    path = ~/.gitconfig-work
+    
+[includeIf "gitdir:~/.dotfiles.git"]
+    path = ~/.gitconfig-dots
