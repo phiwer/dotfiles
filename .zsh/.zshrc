@@ -191,14 +191,6 @@ then
     # Add environment variable ANT_ROOT to cocos2d-x
     export ANT_ROOT="/usr/bin/"
     export PATH=$ANT_ROOT:$PATH
-
 fi
-
-export PATH=$PATH:~/apps/android-studio/bin
-export PATH=$PATH:~/apps/pycharm-community-2018.2.2/bin
-export PATH=$PATH:~/bin
-
-export USE_CCACHE=1
-export NDK_CCACHE=/usr/bin/ccache
 
 source ~/.aliases

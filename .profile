@@ -29,7 +29,14 @@ export NDK_ROOT="$HOME/Android/Sdk/ndk-bundle/"
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk/"
 
 
-export TERMINAL="rxvt-unicode"
+export TERMINAL="xfce4-terminal"
 
 
-export PATH=$PATH:$APPS/android-studio/bin:$APPS/pycharm/bin:$EXTERNAL/cocos2d-x:$APPS/clion/bin
+export PATH=$PATH:~/apps/android-studio/bin
+export PATH=$PATH:~/apps/pycharm/bin
+export PATH=$PATH:~/apps/clion/bin
+export PATH=$PATH:~/bin
+
+export USE_CCACHE=1
+export NDK_CCACHE=/usr/bin/ccache
+
