@@ -15,7 +15,7 @@ gaps outer 0
 set $mod Mod4
 
 # Set screen logical names
-set $mainscreen DP-1
+set $mainscreen DP-5
 #set $sidescreen DP-4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -206,6 +206,8 @@ new_window 1pixel
 
 # autostart
 exec_always --no-startup-id $HOME/.config/i3/startup.sh
+#exec_always --no-startup-id $HOME/.screenlayout/volvo-single-screen.sh
+exec_always --no-startup-id $HOME/.screenlayout/volvo-big-screen.sh
 #exec --no-startup-id i3-msg 'workspace $wsterm; exec /usr/bin/rxvt-unicode'
 exec --no-startup-id i3-msg 'workspace $wsweb; exec /usr/bin/google-chrome'
 #exec --no-startup-id i3-msg 'workspace $wsdev; exec /usr/bin/emacs'
