@@ -34,6 +34,7 @@ export TERMINAL="xfce4-terminal"
 
 export PATH=$PATH:~/apps/android-studio/bin
 export PATH=$PATH:~/apps/pycharm/bin
+export PATH=$PATH:~/apps/intellij/bin
 export PATH=$PATH:~/apps/clion/bin
 export PATH=$PATH:~/bin
 
