@@ -15,6 +15,7 @@ alias studio="$APPS/android-studio/bin/studio.sh"
 
 alias pycharm="$APPS/pycharm/bin/pycharm.sh"
 
+
 alias set_brightness="sudo xrandr --output eDP-1 --brightness 0.5"
 
 alias build_server="ssh gotsvl1734.got.volvocars.net"
