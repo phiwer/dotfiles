@@ -7,12 +7,10 @@
 
 [includeIf "gitdir:~/sources/aosp/icup/**"]
     path = ~/.gitconfig-work
-    
+
 [includeIf "gitdir:~/.dotfiles.git"]
     path = ~/.gitconfig-dots
-
 [user]
     name = Philip Werner
     email = phiwer@gmail.com
     helper = cache --timeout=3600
-
