@@ -8,7 +8,7 @@ height = 40
 #monitor = ${env:MONITOR:eDP-1}
 #monitor = ${env:MONITOR:DP-4}
 #monitor = ${env:MONITOR:DP-5}
-monitor = ${env:MONITOR:DP-5}
+monitor = ${env:MONITOR:HDMI-0}
 
 background = #141021
 foreground = #c4b7c5
