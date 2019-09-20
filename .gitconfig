@@ -10,6 +10,9 @@
     
 [includeIf "gitdir:~/.dotfiles.git"]
     path = ~/.gitconfig-dots
+
 [user]
-	name = Philip Werner
-	email = phiwer@gmail.com
+    name = Philip Werner
+    email = phiwer@gmail.com
+    helper = cache --timeout=3600
+
