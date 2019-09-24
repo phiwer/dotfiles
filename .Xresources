@@ -11,6 +11,11 @@ URxvt.boldFont: xft:Roboto Mono for Powerline:bold:size=14,xft:Roboto Mono:bold:
 URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=14,xft:Roboto Mono:italic:size=12
 URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=14, xft:Roboto Mono:bold:italic:size=12
 
+!URxvt.font: -*-rissole-*
+!URxvt.boldFont: -*-rissole-*
+!URxvt.italicFont: -*-rissole-*
+!URxvt.boldItalicfont: -*-rissole-*
+
 Xft.dpi:                        96
 Xft.antialias:                  1
 Xft.autohint:                   1
@@ -21,7 +26,7 @@ Xft.rgba:                       rgb
 
 URxvt*termName:                 rxvt-256color
 URxvt.depth:                    32
-URxvt*lineSpace:                2
+URxvt*lineSpace:                0
 URxvt.letterSpace:              0
 URxvt.iso14755:                 false
 URxvt.iso14755_52:              false
@@ -32,50 +37,8 @@ URxvt.internalBorder:           25
 URxvt.perl-ext:	                default,matcher
 URxvt.url-launcher:             chromium
 URxvt.matcher.button:           1
-
-!*.foreground:   #ffeefc
-!*.background:   #141021
-!*.cursorColor:  #c16772
-
-! black
-!*.color0:       #4f4858
-!*.color8:       #545d67
-
-! red
-!*.color1:       #c05c47
-!*.color9:       #c16772
-
-! green
-!*.color2:       #428e8e
-!*.color10:      #afda6e
-
-! yellow
-!*.color3:       #e4b226
-!*.color11:      #ebcf1a
-
-! blue
-!*.color4:       #4457a3
-!*.color12:      #4880a5
-
-! magenta
-!*.color5:       #903a62
-!*.color13:      #9568a1
-
-! cyan
-!*.color6:       #7aa1dc
-!*.color14:      #abbcda
-
-! white
-!*.color7:       #c4b7c5
-!*.color15:      #ffeefc
-
-! monochromatic colors for rofi
-!rofi.color-enabled: true
-!rofi.separator-style: none
-!rofi.color-window: #000000, #aaaaaa, #000000
-!rofi.color-normal: #000000, #aaaaaa, #000000, #aaaaaa, #000000
-!rofi.color-active: #000000, #aaaaaa, #000000, #aaaaaa, #000000
-!rofi.color-urgent: #000000, #aaaaaa, #000000, #aaaaaa, #000000
+!URxvt.cursorBlink:              true
+URxvt.saveline: 2048
 
 rofi.color-enabled: true
 rofi.color-window: #141021, #c16772, #9568a1
@@ -89,3 +52,42 @@ rofi.bw: 3
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
 
+
+
+
+! special
+*.foreground:   #9ea7a6
+*.background:   #232c31
+*.cursorColor:  #9ea7a6
+
+! black
+*.color0:       #232c31
+*.color8:       #3f4944
+
+! red
+*.color1:       #2a5491
+*.color9:       #2a5491
+
+! green
+*.color2:       #237986
+*.color10:      #237986
+
+! yellow
+*.color3:       #a03b1e
+*.color11:      #a03b1e
+
+! blue
+*.color4:       #484d79
+*.color12:      #484d79
+
+! magenta
+*.color5:       #c59820
+*.color13:      #c59820
+
+! cyan
+*.color6:       #b02f30
+*.color14:      #b02f30
+
+! white
+*.color7:       #9ea7a6
+*.color15:      #b5d8f6

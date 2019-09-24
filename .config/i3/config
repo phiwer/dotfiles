@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps inner 20
+gaps inner 5
 gaps outer 0
 
 set $mod Mod4
@@ -38,7 +38,7 @@ font pango:Robot Mono 14
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec rxvt-unicode
 
 # kill focused window
 bindsym $mod+Shift+q kill
