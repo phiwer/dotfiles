@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-gaps inner 5
+gaps inner 10
 gaps outer 0
 
 set $mod Mod4
