@@ -6,10 +6,22 @@
 !URxvt.italicFont:     xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
 !URxvt.boldItalicFont: xft:Roboto Mono for Powerline:regular:pixelsize=14:antialias=true,xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true
 
-URxvt.font: xft:Roboto Mono for Powerline:size=14,xft:Roboto Mono:size=12
-URxvt.boldFont: xft:Roboto Mono for Powerline:bold:size=14,xft:Roboto Mono:bold:size=12
-URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=14,xft:Roboto Mono:italic:size=12
-URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=14, xft:Roboto Mono:bold:italic:size=12
+!URxvt.font: xft:Roboto Mono for Powerline:size=14,xft:Roboto Mono:size=12
+!URxvt.boldFont: xft:Roboto Mono for Powerline:bold:size=14,xft:Roboto Mono:bold:size=12
+!URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=14,xft:Roboto Mono:italic:size=12
+!URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=14, xft:Roboto Mono:bold:italic:size=12
+
+!URxvt.font: xft:Consolas:size=14
+!URxvt.boldFont: xft:Consolas:bold:size=14
+!URxvt.italicFont: xft:Consolas:italic:size=14
+!URxvt.bolditalicFont: xft:Consolas:bold:italic:size=14
+
+URxvt.font: xft:Hack-Regular:size=14
+URxvt.boldFont: xft:Hack-Bold:bold:size=14
+URxvt.italicFont: xft:Hack-Italic:italic:size=14
+URxvt.bolditalicFont: xft:Hack-BoldItalic:bold:italic:size=14
+
+
 
 !URxvt.font: -*-rissole-*
 !URxvt.boldFont: -*-rissole-*
@@ -45,49 +57,125 @@ rofi.color-window: #141021, #c16772, #9568a1
 rofi.color-normal: #141021, #ffeefc, #312842, #c16772, #ffeefc
 rofi.color-active: #141021, #c05c47, #312842, #c05c47, #ffeefc
 rofi.color-urgent: #141021, #e4b226, #312842, #e4b226, #ffeefc
-rofi.font: Roboto\ Mono 12
+!rofi.font: Roboto\ Mono 12
+rofi.font: Hack 12
 rofi.width: 800
 rofi.padding: 50
 rofi.bw: 3
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
 
+!Eighties
+! special
+!*.foreground:   #d3d0c8
+!*.background:   #2d2d2d
+!*.cursorColor:  #d3d0c8
 
+! black
+!*.color0:       #2d2d2d
+!*.color8:       #747369
+
+! red
+!*.color1:       #f2777a
+!*.color9:       #f2777a
+
+! green
+!*.color2:       #99cc99
+!*.color10:      #99cc99
+
+! yellow
+!*.color3:       #ffcc66
+!*.color11:      #ffcc66
+
+! blue
+!*.color4:       #6699cc
+!*.color12:      #6699cc
+
+! magenta
+!*.color5:       #cc99cc
+!*.color13:      #cc99cc
+
+! cyan
+!*.color6:       #66cccc
+!*.color14:      #66cccc
+
+! white
+!*.color7:       #d3d0c8
+!*.color15:      #f2f0ec
 
 
 ! special
-*.foreground:   #9ea7a6
-*.background:   #232c31
-*.cursorColor:  #9ea7a6
+!*.foreground:   #9ea7a6
+!*.background:   #232c31
+!*.cursorColor:  #9ea7a6
 
 ! black
-*.color0:       #232c31
-*.color8:       #3f4944
+!*.color0:       #232c31
+!*.color8:       #3f4944
 
 ! red
-*.color1:       #2a5491
-*.color9:       #2a5491
+!*.color1:       #2a5491
+!*.color9:       #2a5491
 
 ! green
-*.color2:       #237986
-*.color10:      #237986
+!*.color2:       #237986
+!*.color10:      #237986
 
 ! yellow
-*.color3:       #a03b1e
-*.color11:      #a03b1e
+!*.color3:       #a03b1e
+!*.color11:      #a03b1e
 
 ! blue
-*.color4:       #484d79
-*.color12:      #484d79
+!*.color4:       #484d79
+!*.color12:      #484d79
 
 ! magenta
-*.color5:       #c59820
-*.color13:      #c59820
+!*.color5:       #c59820
+!*.color13:      #c59820
 
 ! cyan
-*.color6:       #b02f30
-*.color14:      #b02f30
+!*.color6:       #b02f30
+!*.color14:      #b02f30
 
 ! white
-*.color7:       #9ea7a6
-*.color15:      #b5d8f6
+!*.color7:       #9ea7a6
+!*.color15:      #b5d8f6
+
+!Ocean Dark
+! special
+*.foreground:   #c0c5ce
+*.background:   #2b303b
+*.cursorColor:  #c0c5ce
+
+! black
+*.color0:       #2b303b
+*.color8:       #65737e
+
+! red
+*.color1:       #bf616a
+*.color9:       #bf616a
+
+! green
+*.color2:       #a3be8c
+*.color10:      #a3be8c
+
+! yellow
+*.color3:       #ebcb8b
+*.color11:      #ebcb8b
+
+! blue
+*.color4:       #8fa1b3
+*.color12:      #8fa1b3
+
+! magenta
+*.color5:       #b48ead
+*.color13:      #b48ead
+
+! cyan
+*.color6:       #96b5b4
+*.color14:      #96b5b4
+
+! white
+*.color7:       #c0c5ce
+*.color15:      #eff1f5
+
