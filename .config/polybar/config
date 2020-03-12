@@ -8,7 +8,7 @@ height = 40
 #monitor = ${env:MONITOR:eDP-1}
 #monitor = ${env:MONITOR:DP-4}
 #monitor = ${env:MONITOR:DP-5}
-monitor = ${env:MONITOR:HDMI-0}
+monitor = ${env:MONITOR:eDP-1}
 
 background = #141021
 foreground = #c4b7c5
@@ -21,10 +21,10 @@ fixed-center = true
 #font-2 = xos4\ Terminus:size=14;0
 #font-3 = Siji:pixelsize=11;1
 #font-0 = "Roboto Mono Medium for Powerline:style=Medium,Regular;pixelsize=12;1"
-#font-0 = "Consolas:style=Medium,Regular;pixelsize=12;1"
-font-0 = "Hack:style=Medium,Regular;pixelsize=12;1"
-#font-1 = "FontAwesome:size=12;0"
-#font-2 = "PragmataPro Nerd Font:pixelsize=12:weight=bold;0"
+#font-0 = "Source Code Pro for Powerline:style=Regular;pixelsize=12;1"
+font-0 = "Hack-Regular:style=Regular;pixelsize=12;1"
+font-1 = "FontAwesome:size=12;0"
+font-2 = "PragmataPro Nerd Font:pixelsize=12:weight=bold;0"
 #font-1 =
 
 #font-0 = "Roboto Mono Medium for Powerline:pixelsize=12;1"

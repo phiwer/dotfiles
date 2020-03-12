@@ -11,17 +11,10 @@
 !URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=14,xft:Roboto Mono:italic:size=12
 !URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=14, xft:Roboto Mono:bold:italic:size=12
 
-!URxvt.font: xft:Consolas:size=14
-!URxvt.boldFont: xft:Consolas:bold:size=14
-!URxvt.italicFont: xft:Consolas:italic:size=14
-!URxvt.bolditalicFont: xft:Consolas:bold:italic:size=14
-
 URxvt.font: xft:Hack-Regular:size=14
 URxvt.boldFont: xft:Hack-Bold:bold:size=14
 URxvt.italicFont: xft:Hack-Italic:italic:size=14
 URxvt.bolditalicFont: xft:Hack-BoldItalic:bold:italic:size=14
-
-
 
 !URxvt.font: -*-rissole-*
 !URxvt.boldFont: -*-rissole-*

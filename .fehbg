@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/phiwer/.local/share/wallpapers/1984.jpg' 
+feh --no-fehbg --bg-scale '/$HOME/.local/share/wallpapers/1984.jpg'
