@@ -148,10 +148,32 @@ function disable_touchpad
     fi
 }
 
+function start_dlt_viewer
+{
+    adb forward tcp:3490 tcp:3490
+    /usr/bin/dlt_viewer&
+}
+
 disable_touchpad
+
+function busy
+{
+    source ~/sources/scripts/luxafor-python/venv/bin/activate
+    ~/sources/scripts/luxafor-python/luxafor-linux.py color -l 255 -r 255 -g 0 -b 0
+    deactivate
+}
+
+function free
+{
+    source ~/sources/scripts/luxafor-python/venv/bin/activate
+    ~/sources/scripts/luxafor-python/luxafor-linux.py color -l 255 -r 0 -g 255 -b 0
+    deactivate
+}
+
 
 if [[ $HOST == 'deathstar' ]]
 then
+    alias repo='~/sources/aosp/icup/.repo/repo/repo'
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
     alias ff='find . -type f -iname'

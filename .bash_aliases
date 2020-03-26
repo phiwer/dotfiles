@@ -5,7 +5,7 @@ function clear_dtc {
     adb shell cmd_line_diag_client raw -t 1201 --data 14FFFFFF
 }
 
-bitWiseAnd() {
+bitwise_and() {
     local IFS='&'
     printf "%s\n" "$(( $* ))"
 }
@@ -22,42 +22,42 @@ function test_dtc {
     echo "Testing DTC for ${dtc_name}"
     echo "Raw byte data: ${dtc_raw}"
     echo "6th byte data: ${dtc_value}"
-    if [ $(bitWiseAnd $dtc_value "0x80") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x80") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 7 set: Warning indicator requested"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x40") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x40") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 6 set: Test not completed this monitoring cycle"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x20") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x20") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 5 set: Test failed since last clear"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x10") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x10") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 4 set: Test not completed since last clear"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x08") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x08") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 3 set: Confirmed DTC"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x04") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x04") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 2 set: Pending"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x02") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x02") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 1 set: Test failed this monitoring cycle"
     fi
-    if [ $(bitWiseAnd $dtc_value "0x01") -ne 0 ]
+    if [ $(bitwise_and $dtc_value "0x01") -ne 0 ]
     then
 	# other script actions go here
 	echo "bit 0 set: Test failed"
@@ -76,6 +76,66 @@ function read_dtc {
     test_dtc "960A00" "MOST"
 
     test_dtc "960B00" "APIX"
+}
+
+
+function loop_test {
+    if [ $# -eq 0 ]; then
+	echo "Usage: run_test <count>"
+	return
+    fi
+    rm results.txt || true
+    count=$1
+    for ((i=1;i<=count;i++)); do
+	echo "Running iteration: ${i}"
+	#component_test_run | tee result_"${i}".txt
+	pass_fail_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED" -e "Result: FAILED")
+	pass_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED")
+	fail_count=$(cat result_"${1}".txt | grep -a "INFO" |  grep -c -e "Result: FAILED")
+	if [ $pass_fail_count -eq 0 ]
+	then
+	    echo "${i} N/A" >> results.txt
+	    echo "NA"
+	elif [ $pass_count -gt 0 ]
+	then
+	    echo "${i} PASSED" >> results.txt
+	    echo "PASS"
+	elif [ $fail_count -gt 0 ]
+	then 
+	    echo "${i} FAILED" >> results.txt
+	    echo "FAIL"
+	fi
+    done
+}
+
+
+function run_test {
+    if [ $# -eq 0 ]; then
+	echo "Usage: run_test <count>"
+	return
+    fi
+    rm results.txt || true
+    count=$1
+    for ((i=1;i<=count;i++)); do
+	echo "Running iteration: ${i}"
+	component_test_run > result_"${i}".txt
+	pass_fail_count=$(cat result_"${i}".txt | grep -a "INFO" | grep -c -e "Result: PASSED" -e "Result: FAILED")
+	pass_count=$(cat result_"${i}".txt | grep -a "INFO" | grep -c -e "Result: PASSED")
+	fail_count=$(cat result_"${i}".txt | grep -a "INFO" |  grep -c -e "Result: FAILED")
+	if [ $pass_fail_count -eq 0 ]
+	then
+	    echo "${i} N/A" >> results.txt
+	    echo "${i} N/A"
+	elif [ $pass_count -gt 0 ]
+	then
+	    echo "${i} PASSED" >> results.txt
+	    echo "${i} PASSED"
+	elif [ $fail_count -gt 0 ]
+	then 
+	    echo "${i} FAILED" >> results.txt
+	    echo "${i} FAILED"
+	fi
+    done
 }
 
 function set_garage_mode_one {
