@@ -2,6 +2,8 @@
 
 function main
 {
+    nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
     feh --bg-scale "$HOME/.local/share/wallpapers/1984.jpg"&
     #wal -i "$HOME/.local/share/wallpapers/1984.jpg"&
 
