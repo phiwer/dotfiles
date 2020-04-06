@@ -183,6 +183,7 @@ then
     alias vccdocker='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh'
     export no_proxy="*.volvocars.net"
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/aosp/icup/test:/home/pwerner/sources/icup/vendor/
+    export PATH=$PATH:~/apps/Discord/
 fi
 
 
