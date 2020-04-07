@@ -81,14 +81,14 @@ function read_dtc {
 
 function loop_test {
     if [ $# -eq 0 ]; then
-	echo "Usage: run_test <count>"
+	echo "Usage: loop_test <count>"
 	return
     fi
     rm results.txt || true
     count=$1
     for ((i=1;i<=count;i++)); do
 	echo "Running iteration: ${i}"
-	#component_test_run | tee result_"${i}".txt
+	component_test_run | tee result_"${i}".txt
 	pass_fail_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED" -e "Result: FAILED")
 	pass_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED")
 	fail_count=$(cat result_"${1}".txt | grep -a "INFO" |  grep -c -e "Result: FAILED")
