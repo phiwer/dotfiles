@@ -89,9 +89,9 @@ function loop_test {
     for ((i=1;i<=count;i++)); do
 	echo "Running iteration: ${i}"
 	component_test_run | tee result_"${i}".txt
-	pass_fail_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED" -e "Result: FAILED")
-	pass_count=$(cat result_"${1}".txt | grep -a "INFO" | grep -c -e "Result: PASSED")
-	fail_count=$(cat result_"${1}".txt | grep -a "INFO" |  grep -c -e "Result: FAILED")
+	pass_fail_count=$(cat result_"${i}".txt | grep -a "INFO" | grep -c -e "Result: PASSED" -e "Result: FAILED")
+	pass_count=$(cat result_"${i}".txt | grep -a "INFO" | grep -c -e "Result: PASSED")
+	fail_count=$(cat result_"${i}".txt | grep -a "INFO" |  grep -c -e "Result: FAILED")
 	if [ $pass_fail_count -eq 0 ]
 	then
 	    echo "${i} N/A" >> results.txt
