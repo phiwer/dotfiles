@@ -171,7 +171,7 @@ function free
 }
 
 
-if [[ $HOST == 'deathstar' ]]
+if [[ $HOST == 'dunderklump' ]]
 then
     alias repo='~/sources/aosp/icup/.repo/repo/repo'
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
@@ -185,7 +185,6 @@ then
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/aosp/icup/test:/home/pwerner/sources/icup/vendor/
     export PATH=$PATH:~/apps/Discord/
 fi
-
 
 if [[ $HOST == 'nexus' ]]
 then
