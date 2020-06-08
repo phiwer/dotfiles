@@ -13,7 +13,7 @@ bitwise_and() {
 function test_dtc {
     dtc=$1
     dtc_name=$2
-    
+
     dtc_raw=$(adb shell cmd_line_diag_client raw -t 1201 --data 1904 "$dtc" ff)
     dtc_raw=($dtc_raw) # Convert to string array and take hex string
     dtc_raw=${dtc_raw[5]}
@@ -67,12 +67,12 @@ function test_dtc {
     echo ""
     echo ""
 }
-	    
+
 function read_dtc {
     adb root
 
     test_dtc "960900" "TCAM"
-    
+
     test_dtc "960A00" "MOST"
 
     test_dtc "960B00" "APIX"
@@ -176,7 +176,7 @@ function flash_from_build_server {
 	echo "usage: flash_from_build_server ihu_vcc|robot_taxi"
 	return
     fi
-    
+
     BUILD_VARIANT=$1
     FLASHFILES_DIR="$HOME/sources/flashfiles/$BUILD_VARIANT"
     mkdir -p "$FLASHFILES_DIR"
@@ -220,7 +220,7 @@ function aosp_gen_cmake() {
     CMAKE_PROJECT_PATH="${AOSP_CLION_DIR}"/CMakeLists.txt
 
     AOSP_VCC_HW_DIR="${AOSP_ROOT_DIR}"/vendor/volvocars/hardware
-   
+
     # remove existing CMakeLists.txt
     rm -f "${CMAKE_PROJECT_PATH}" || true
 
