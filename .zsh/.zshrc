@@ -151,7 +151,7 @@ function disable_touchpad
 function start_dlt_viewer
 {
     adb forward tcp:3490 tcp:3490
-    /usr/bin/dlt_viewer&
+    /usr/bin/dlt-viewer&
 }
 
 disable_touchpad
