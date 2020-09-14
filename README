@@ -1,0 +1,10 @@
+alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
+
+git init --bare $HOME/.dots.git
+dots remote add origin https://github.com/jaagr/dots.git
+
+dots config status.showUntrackedFiles no
+
+# Useful aliases
+dots config alias.untracked "status -u ."
+dots config alias.untracked-at "status -u"
