@@ -189,7 +189,7 @@ function flash_from_build_server {
 
 function add_subdirectories() {
     FIND_PATH=$(command -v find)
-    GREP_PATH=$(command -v grep)
+    GREP_PATH="grep"
     DIRENAME_PATH=$(command -v dirname)
 
     for proj in $("${FIND_PATH}" "${AOSP_VCC_HW_DIR}"/"${1}" -name CMakeLists.txt); do
@@ -213,11 +213,18 @@ function aosp_gen_cmake() {
     PROJ_LIST=("$@")
 
     #declare -a PROJ_LIST=("connectivity/netman" "connectivity/radio")
-
-    AOSP_ROOT_DIR="${HOME}"/sources/aosp/icup
+    PWD=`pwd`
+    AOSP_ROOT_DIR="$PWD"
     AOSP_OUT_DIR="${AOSP_ROOT_DIR}"/out
     AOSP_CLION_DIR="${AOSP_ROOT_DIR}"/development/ide/clion
     CMAKE_PROJECT_PATH="${AOSP_CLION_DIR}"/CMakeLists.txt
+
+    if [ ! -d $AOSP_CLION_DIR ]; then
+        echo "Please execute from root AOSP."
+        return
+    fi
+
+    echo $CMAKE_PROJECT_PATH
 
     AOSP_VCC_HW_DIR="${AOSP_ROOT_DIR}"/vendor/volvocars/hardware
 
@@ -235,8 +242,12 @@ EOF
             add_subdirectories "${item}"
 	done
     else
-	add_subdirectories
+	    add_subdirectories
     fi
+}
+
+function build_sync_systemui {
+    m -j6 VccSystemUI && adb root && adb remount && adb shell stop && adb sync system && sleep 1 && adb shell start
 }
 
 sync_time
