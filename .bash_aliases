@@ -250,7 +250,5 @@ function build_sync_systemui {
     m -j6 VccSystemUI && adb root && adb remount && adb shell stop && adb sync system && sleep 1 && adb shell start
 }
 
-sync_time
-
 export SOONG_GEN_CMAKEFILES=1
 export SOONG_GEN_CMAKEFILES_DEBUG=1
