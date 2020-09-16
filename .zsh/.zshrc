@@ -177,12 +177,12 @@ then
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
     alias ff='find . -type f -iname'
-    alias vccdocker='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh --multiuser'
-
-    alias vccdocker_local='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
-    alias vccdocker='~/sources/aosp/icup/vendor/volvocars/tools/docker_build/run.sh'
+    alias pw_vccdocker4='~/sources/ihu4/vendor/volvocars/tools/docker_build/run.sh --multiuser'
+    alias pw_vccdocker4_local='~/sources/vcc/ihu4/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
+    alias pw_vccdocker5='~/sources/vcc/ihu5/vendor/volvocars/tools/docker_build/run.sh --multiuser'
+    alias pw_vccdocker5_local='~/sources/vcc/ihu5/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
     export no_proxy="*.volvocars.net"
-    export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/aosp/icup/test:/home/pwerner/sources/icup/vendor/
+    export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/vcc/ihu4/test:/home/pwerner/sources/vcc/ihu4/vendor
     export PATH=$PATH:~/apps/Discord/
 fi
 
