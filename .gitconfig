@@ -4,24 +4,15 @@
     user = phiwer
 [core]
     editor = emacs
-#[user]
-#    name = Philip Werner
-#    email = phiwer@gmail.com
-#    helper = cache --timeout=3600
 [pager]
 	branch = false
-[includeIf "gitdir:~/sources/aosp/icup/**"]
+[includeIf "gitdir:~/sources/vcc/**"]
     path = ~/.gitconfig-work
 [includeIf "gitdir:~/.dotfiles.git/"]
     path = ~/.gitconfig-dots
-[user]
-	email = philip.werner@volvocars.com
-	name = Werner, Philip
 [http]
 	cookiefile = ~/.gitcookies
 [credential]
 	helper = cache --timeout=2592000
-[pull]
-	rebase = true
 [merge]
     tool = meld
