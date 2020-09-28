@@ -170,17 +170,71 @@ function free
     deactivate
 }
 
+function pw_vccdocker5
+{
+    /home/pwerner/sources/vcc/ihu5/tools/volvo/docker_build/run.sh --multiuser $@
+}
+
+function pw_ihu5_build_1_aosp
+{
+    pw_vccdocker5 "cd /home/pwerner/sources/vcc/ihu5/android; source build/envsetup.sh; lunch msmnile_gvmq; make -j7 | tee ~/sources/vcc/ihu5/build_aosp.log"
+}
+
+function pw_ihu5_build_2_nonhlos
+{
+    pw_vccdocker5 "cd /home/pwerner/sources/vcc/ihu5/nonhlos; source vendor/volvocars/setenv_qcomBSP.sh; compileBSP.sh | tee ~/sources/vcc/ihu5/build_nonhlos.log"
+}
+
+function pw_ihu5_build_3_qnx
+{
+    pw_vccdocker5 "env; cd /home/pwerner/sources/vcc/ihu5/qnx/apps/qnx_ap; source vendor/volvocars/setenv_QNX-ihu5.sh; make clean; make | tee ~/sources/vcc/ihu5/build_qnx.log"
+}
+
+function pw_ihu5_build_4_sign_images
+{
+    pw_vccdocker5 "cd /home/pwerner/sources/vcc/ihu5/nonhlos; source vendor/volvocars/setenv_qcomBSP.sh; signImages.sh | tee ~/sources/vcc/ihu5/build_signing.log"
+}
+
+function pw_ihu5_build_5_flash
+{
+    pw_vccdocker5 "cd /home/pwerner/sources/vcc/ihu5/nonhlos/common/build/; python fastboot_complete.py --st=ufs --pf=8155_la; fastboot reboot"
+}
+
+function pw_ihu5_build_6_flash
+{
+    pw_vccdocker5 "cd /home/pwerner/sources/vcc/ihu5/nonhlos/common/build/; echo `pwd`"
+}
+
+function pw_ihu5_build_clean
+{
+    cd ~/sources/vcc/ihu5/
+    repo forall -vc "git clean -xdf; git reset --hard"
+    repo sync -j7
+}
+
+function pw_ihu5_build_all
+{
+    set -ex
+    pw_ihu5_build_1_aosp
+    pw_ihu5_build_2_nonhlos
+    pw_ihu5_build_3_qnx
+    pw_ihu5_build_4_sign_images
+    pw_ihu5_build_5_flash
+}
+
+function pw_ihu5_flash
+{
+    pw_vccdocker5 "cd ~/sources/vcc/ihu5/nonhlos/common/build/; python fastboot_complete.py --st=ufs --pf=8155_la; fastboot reboot"
+}
+
 
 if [[ $HOST == 'dunderklump' ]]
 then
-    alias repo='~/sources/aosp/icup/.repo/repo/repo'
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
     alias ff='find . -type f -iname'
     alias pw_vccdocker4='~/sources/vcc/ihu4/vendor/volvocars/tools/docker_build/run.sh --multiuser'
     alias pw_vccdocker4_local='~/sources/vcc/ihu4/vendor/volvocars/tools/docker_build/run.sh --multiuser --local'
-    alias pw_vccdocker5='~/sources/vcc/ihu5/ihu5_tools/docker_build/run.sh --multiuser'
-    alias pw_vccdocker5_local='~/sources/vcc/ihu5/ihu5_tools/docker_build/run.sh --multiuser --local'
     export no_proxy="*.volvocars.net"
     export PYTHONPATH=$PYTHONPATH:/home/pwerner/sources/vcc/ihu4/test:/home/pwerner/sources/vcc/ihu4/vendor
     export PATH=$PATH:~/apps/Discord/
