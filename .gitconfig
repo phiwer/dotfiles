@@ -16,3 +16,6 @@
 	helper = cache --timeout=2592000
 [merge]
     tool = meld
+[user]
+	name = Philip Werner
+	email = phiwer@gmail.com
