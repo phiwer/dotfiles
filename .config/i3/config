@@ -215,9 +215,11 @@ assign [class="^Spotify"] → $wsmedia
 assign [class="^Gnome-control-center\.real$"] → $wsmedia
 assign [class="^Sublime_text$"] → $wsdev
 assign [class="^.*jetbrains-pycharm.*$"] → $wsdev
+assign [class="^.*jetbrains-clion.*$"] → $wsdev
 assign [class="^Google-chrome$"] → $wsweb
 assign [class="^libreoffice-writer$"] → $wsoffice
 assign [class="^mc$"] → $wsfile
+assign [class="^Emacs$"] → $wsdev
 
 new_window 1pixel
 
