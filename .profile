@@ -37,4 +37,5 @@ export PATH=$PATH:~/apps/pycharm/bin
 export PATH=$PATH:~/apps/intellij/bin
 export PATH=$PATH:~/apps/clion/bin
 export PATH=$PATH:~/apps/rider/bin
+export PATH=$PATH:~/apps/webstorm/bin
 export PATH=$PATH:~/bin
