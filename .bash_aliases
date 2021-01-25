@@ -252,3 +252,5 @@ function build_sync_systemui {
 
 export SOONG_GEN_CMAKEFILES=1
 export SOONG_GEN_CMAKEFILES_DEBUG=1
+
+alias adb='adb wait-for-device'
