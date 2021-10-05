@@ -13,7 +13,7 @@
 [http]
 	cookiefile = ~/.gitcookies
 [credential]
-	helper = cache --timeout=2592000
+	helper = store
 [merge]
     tool = meld
 [user]
