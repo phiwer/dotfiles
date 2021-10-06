@@ -21,7 +21,7 @@ URxvt.bolditalicFont: xft:Hack-BoldItalic:bold:italic:size=14
 !URxvt.italicFont: -*-rissole-*
 !URxvt.boldItalicfont: -*-rissole-*
 
-Xft.dpi:                        96
+Xft.dpi:                        120
 Xft.antialias:                  1
 Xft.autohint:                   1
 Xft.hinting:                    1
