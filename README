@@ -1,6 +1,6 @@
-alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
+alias dots='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
-git init --bare $HOME/.dots.git
+git init --bare $HOME/.dotfiles.git
 dots remote add origin https://github.com/phiwer/dotfiles.git
 
 dots config status.showUntrackedFiles no
