@@ -4,6 +4,7 @@
     user = phiwer
 [core]
     editor = emacs
+	autocrlf = input
 [pager]
 	branch = false
 [includeIf "gitdir:~/sources/vcc/**"]
@@ -13,7 +14,7 @@
 [http]
 	cookiefile = ~/.gitcookies
 [credential]
-	helper = cache --timeout=2592000
+	helper = store
 [merge]
     tool = meld
 [user]
