@@ -227,8 +227,7 @@ function pw_ihu5_flash
     pw_vccdocker5 "cd ~/sources/vcc/ihu5/nonhlos/common/build/; python fastboot_complete.py --st=ufs --pf=8155_la; fastboot reboot"
 }
 
-
-if [[ $HOST == 'dunderklump' ]]
+if [[ $HOST == 'shrimphorse' ]]
 then
     alias VIP='sudo minicom -D /dev/ttyVIP -C ~/logs/minicom/VIP-log.txt'
     alias MP='sudo minicom -D /dev/ttyMP -C ~/logs/minicom/MP-log.txt'
