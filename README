@@ -8,3 +8,4 @@ dots config status.showUntrackedFiles no
 # Useful aliases
 dots config alias.untracked "status -u ."
 dots config alias.untracked-at "status -u"
+
