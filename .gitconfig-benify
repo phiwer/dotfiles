@@ -1,0 +1,5 @@
+[user]
+	name = Philip Werner
+	email = philip.werner@benify.com
+[push]
+	default = simple

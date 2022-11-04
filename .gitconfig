@@ -7,16 +7,18 @@
 	autocrlf = input
 [pager]
 	branch = false
+[user]
+	name = Philip Werner
+	email = phiwer@gmail.com
 [includeIf "gitdir:~/sources/vcc/**"]
     path = ~/.gitconfig-work
 [includeIf "gitdir:~/.dotfiles.git/"]
     path = ~/.gitconfig-dots
+[includeIf "gitdir:~/IdeaProjects/**"]
+    path = ~/.gitconfig-benify
 [http]
 	cookiefile = ~/.gitcookies
 [credential]
 	helper = store
 [merge]
     tool = meld
-[user]
-	name = Philip Werner
-	email = phiwer@gmail.com
