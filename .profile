@@ -28,9 +28,7 @@ export NDK_ROOT="$HOME/Android/Sdk/ndk-bundle/"
 
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk/"
 
-
 export TERMINAL="xfce4-terminal"
-
 
 export PATH=$PATH:~/apps/android-studio/bin
 export PATH=$PATH:~/apps/pycharm/bin
@@ -40,3 +38,7 @@ export PATH=$PATH:~/apps/rider/bin
 export PATH=$PATH:~/apps/webstorm/bin
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/apps/maven/bin
+export PATH=$PATH:~/go/bin
+
+export JAVA_HOME="$HOME/.jdks/azul-19.0.2"
