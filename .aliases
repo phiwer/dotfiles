@@ -21,3 +21,4 @@ alias build_server="ssh gotsvl1734.got.volvocars.net"
 
 alias latest_host_log="cd ~/sources/aosp/icup/out/host/linux-x86/vts/android-vts/logs/latest/"
 
+alias startvpn='sudo /usr/sbin/openvpn --config /home/benify.net/phiwer/openvpn/openvpn.conf'
