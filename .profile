@@ -40,7 +40,9 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/apps/maven/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:~/apps/rancher-desktop
+export PATH=$PATH:~/.rd/bin
 
-export JAVA_HOME="$HOME/.jdks/azul-19.0.2"
+export JAVA_HOME="$HOME/.jdks/azul-21.0.1"
 
-export FPS_WAR_LOCATION="$HOME/IdeaProjects/fps/fps-web/target/fps-web-3.0.5-SNAPSHOT"
+export FPS_WAR_LOCATION="$HOME/IdeaProjects/fps/fps-web/target/"
